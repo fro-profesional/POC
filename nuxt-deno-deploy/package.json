@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "scripts": {
+    "postinstall": "nuxt prepare",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "build": "nuxt build",
+    "build:deno": "NITRO_PRESET=deno nuxt build",
+    "preview": "nuxt preview",
+    "deploy": "cd .output/ && deployctl deploy --project='nuxt-deno-deploy' server/index.ts && cd .."
+  },
+  "devDependencies": {
+    "nuxt": "3.0.0"
+  }
+}
