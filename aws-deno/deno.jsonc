@@ -1,0 +1,11 @@
+{
+  "tasks": {
+    "dev": "deno run -A --watch local.ts",
+    "build": "docker build -t aws-deno:latest .",
+    "preview": "docker run -p 9000:8080 aws-deno:latest",
+    "build:preview": "deno task build && deno task preview",
+    "deploy": "sls deploy --force --verbose",
+    "logs": "sls logs -f service -t",
+    "deploy:logs": "deno task deploy && deno task logs"
+  }
+}
