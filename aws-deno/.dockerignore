@@ -1,0 +1,6 @@
+/.serverless
+/.vscode
+.dockerignore
+.gitignore
+Dockerfile
+serverless.js
