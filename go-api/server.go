@@ -27,37 +27,37 @@ func main() {
 		return c.SendString("Hello from GO + DOCKER!")
 	})
 
-	app.Get("/products", func(c *fiber.Ctx) error {
-		// ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
-		// defer cancel()
+	// app.Get("/products", func(c *fiber.Ctx) error {
+	// 	// ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	// 	// defer cancel()
 
-		category := c.Query("category")
-		product := c.Query("product")
+	// 	category := c.Query("category")
+	// 	product := c.Query("product")
 
-		// productsCollection := getCollection(DBclient, "products")
-		// cursor, err := productsCollection.Find(ctx, bson.D{})
+	// 	// productsCollection := getCollection(DBclient, "products")
+	// 	// cursor, err := productsCollection.Find(ctx, bson.D{})
 
-		// if err != nil { log.Fatal(err) }
+	// 	// if err != nil { log.Fatal(err) }
 
-		// TODO: Get data from cursor and 
+	// 	// TODO: Get data from cursor and 
 
 
-		return c.JSON(fiber.Map{
-			"category": category,
-			"product": product,
-			// "cursor": cursor
-		})
-	})
+	// 	return c.JSON(fiber.Map{
+	// 		"category": category,
+	// 		"product": product,
+	// 		// "cursor": cursor
+	// 	})
+	// })
 
-	app.Get("/categories", func(c *fiber.Ctx) error {
-		category := c.Query("category")
+	// app.Get("/categories", func(c *fiber.Ctx) error {
+	// 	category := c.Query("category")
 
-		// var categoriesCollection *mongo.Collection = getCollection(DB, "categories")
+	// 	// var categoriesCollection *mongo.Collection = getCollection(DB, "categories")
 
-		return c.JSON(fiber.Map{
-			"category": category,
-		})
-	})
+	// 	return c.JSON(fiber.Map{
+	// 		"category": category,
+	// 	})
+	// })
 
 	app.Listen(":3000")
 }
