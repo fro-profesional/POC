@@ -1,0 +1,11 @@
+---
+version: '3'
+services:
+  umami:
+    image: docker.umami.dev/umami-software/umami:mysql-latest
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_TYPE: "mysql"
+      HASH_SALT: "5949448059"
+    restart: always
