@@ -1,0 +1,18 @@
+service: minimal-express
+provider:
+  name: aws
+  runtime: "nodejs18.x"
+  timeout: 25
+  deploymentMethod: "direct"
+package:
+  patterns:
+    - "!**"
+    - "lambda.mjs"
+    - "node_modules/**"
+    - "src/**"
+    - ".env"
+functions:
+  service:
+    handler: "lambda.handler"
+    events:
+      - httpApi: "*"
