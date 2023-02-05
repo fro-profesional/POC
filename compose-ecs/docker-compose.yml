@@ -8,6 +8,4 @@ services:
       VAULT_ADDR: "http://0.0.0.0:8200"
       VAULT_API_ADDR: "http://0.0.0.0:8200"
       VAULT_DEV_ROOT_TOKEN_ID: "vault-plaintext-root-token"
-      VAULT_DISABLE_MLOCK: true
-    # vault-server_1  | Unseal Key: U4FbmTMzZEWcz1h91M3GkEx0K1TBS29Z7l47x/DZ/N0=
-    # vault-server_1  | Root Token: vault-plaintext-root-token
+      VAULT_DISABLE_MLOCK: tru
