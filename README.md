@@ -1,3 +1,3 @@
-# Proof of concept xx
+# Proof of concept
 
 Quick test of different things
